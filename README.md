@@ -36,7 +36,28 @@ my-plugin/
 }
 ```
 
-## 3. 插件类型
+## 3. 图标配置 (Icon) [NEW]
+
+为了让你的插件在列表中看起来更美观，请务必配置一个精美的图标。
+
+*   **配置方式**：在 `package.json` 的 `antigravity.icon` (或根级 `icon`) 字段中指定。
+*   **支持格式**：`.png`, `.jpg`, `.jpeg`, `.svg`, `.ico`, `.webp`。
+*   **路径规则**：
+    *   **本地图片**：推荐使用相对路径，例如 `"icon": "logo.png"`。请确保图片文件物理存在于插件目录中。
+    *   **在线图片**：也支持 HTTP/HTTPS 链接，但加载速度取决于网络。
+*   **建议尺寸**：建议使用 **256x256** 或更高分辨率的 PNG 图片，以获得最佳显示效果。
+
+```json
+{
+  "name": "my-plugin",
+  "antigravity": {
+    "icon": "assets/logo.png", // 引用插件目录下的 assets/logo.png
+    "title": "My Plugin"
+  }
+}
+```
+
+## 4. 插件类型
 
 目前支持以下类型的插件集成：
 
